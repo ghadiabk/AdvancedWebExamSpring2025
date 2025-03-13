@@ -11,7 +11,10 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        $request->ajax()([
+            'name'=> 'required|exists:students,name'
+        ]);
+
     }
 
     /**
